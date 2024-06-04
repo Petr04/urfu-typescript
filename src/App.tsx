@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import Home from './components/Home';
+import User from './components/User';
+import Register from './components/Register';
+import Profile from './components/Profile';
+import { RootState } from './store/store';
+import './styles.css';
 
-function App() {
+const App = () => {
+  const token = useSelector((state: RootState) => state.user.token);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/user/:id" element={<User />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/profile" element={token ? <Profile /> : <Navigate to="/register" />} />
+        <Route path="/" element={<Navigate to="/home" />} />
+      </Routes>
     </div>
   );
-}
+};
 
 export default App;

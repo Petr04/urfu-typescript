@@ -1,0 +1,141 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212; /* Темный фон */
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  padding: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #333; /* Темный фон для инпутов */
+  color: white;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00bcd4; /* Бирюзовый цвет */
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #008c9e; /* Более темный бирюзовый цвет при наведении */
+}
+
+.home,
+.user-detail,
+.register,
+.profile {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1e1e1e; /* Темный фон для контейнеров */
+}
+
+.home {
+  max-width: 1280px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.home-button {
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-button:hover {
+  background-color: #008c9e;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.profile-icon img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.user-card {
+  width: 300px; /* Ширина карточки */
+  height: 400px; /* Высота карточки */
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333; /* Темный фон карточки */
+  text-align: center;
+  color: white;
+}
+
+.user-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* Квадратное изображение */
+  border-radius: 15px; /* Закругленные углы */
+}
+
+.search-input {
+  width: 300px; /* Длина поисковой строки */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #333; /* Темный фон для инпутов */
+  color: white;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00bcd4; /* Бирюзовый цвет */
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #008c9e; /* Более темный бирюзовый цвет при наведении */
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
